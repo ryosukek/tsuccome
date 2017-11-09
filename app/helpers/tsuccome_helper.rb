@@ -1,0 +1,2 @@
+module TsuccomeHelper
+end
