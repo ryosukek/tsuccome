@@ -1,0 +1,14 @@
+<div>
+  <h2>手持ちの写真からお題とツッコミを投稿しよう</h2>
+  <%= form_for(@post) do |f| %>
+    <div>
+      <%= f.file_field :image %>
+    </div>
+    <div>
+      <%= f.text_area :title, placeholder: 'ツッコミを入力', style: 'width: 30%; height: 100px;' %>
+    </div>
+    <div>
+      <%= f.submit "投稿する" %>
+    </div>
+  <% end %>
+</div>
