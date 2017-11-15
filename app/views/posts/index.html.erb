@@ -1,0 +1,6 @@
+<div>
+  <% @posts.each do |post| %>
+    <%= image_tag post.image(:medium) %>
+    <%= simple_format(post.text) %>
+  <% end %>
+</div>

@@ -1,4 +1,8 @@
 class PostsController < ApplicationController
+  def index
+    @posts = Post.all
+  end
+
   def new
     @post = Post.new
   end
@@ -9,6 +13,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.permit(:image, :text)
+    params.require(:post).permit(:image, :text)
   end
 end
